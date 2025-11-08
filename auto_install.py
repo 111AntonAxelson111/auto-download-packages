@@ -82,19 +82,22 @@ def auto_install(should_we:bool):
     green_start = "\033[92m"
     green_end = '\033[0m'
 
-    print('-'*30)
+    symb='๑'
+    length=30
+    print(symb*length)
     print()
     print(f"[{green_start}{"pip"}{green_end}] we update ")
     os.system(f"python.exe -m pip install --upgrade pip")
     print()
     for module in lis_modules:
-        print('-'*30)
+        print(symb*length)
         print()
         print(f"[{green_start}{module}{green_end}]")
         print(f"[{green_start}{module}{green_end}] we install with pip")
         os.system(f"pip install {module}")
         print()
-    print('-'*30)
+    print(symb*length)
     print()
+
 
     
